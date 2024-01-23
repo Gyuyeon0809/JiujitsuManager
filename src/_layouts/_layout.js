@@ -39,10 +39,10 @@ const Wrap = styled.div`
     font-weight: normal;
     font-style: normal;
 }
-/* -webkit-user-select: none !important; 
+-webkit-user-select: none !important; 
 -moz-user-select: -moz-none !important;
 -ms-user-select: none !important;
-user-select: none !important; */
+user-select: none !important;
 `
 const ChildWrap = styled.div`
    min-height: 750px;

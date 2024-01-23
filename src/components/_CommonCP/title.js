@@ -21,7 +21,6 @@ const Title = (props) =>{
 const TitleWrap = styled.div`
     position: relative;
     text-align: center;
-    border: 1px solid black;
 `
 const TitleContents = styled.p`
     font-family: 'SEBANG_Gothic_Bold';

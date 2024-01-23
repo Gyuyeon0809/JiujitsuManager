@@ -8,7 +8,7 @@
 import Layout from "../../_layouts/_layout";
 import Title from "../../components/_CommonCP/title";
 import CompList from "../../components/compInfoCP/compListCP/compList";
-const CompListPage = () =>{
+const CompInfoListPage = () =>{
     return(
         <Layout>
             <Title 
@@ -20,4 +20,4 @@ const CompListPage = () =>{
         </Layout>
     );
 }
-export default CompListPage;
+export default CompInfoListPage;
