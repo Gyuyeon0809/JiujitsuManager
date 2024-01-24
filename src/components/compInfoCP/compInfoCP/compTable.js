@@ -7,7 +7,8 @@
 *********************/
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-const CompTable = () =>{
+const CompTable = (props) =>{
+    // const url = '/'+props.link;
     return(
         <Wrap>
             <CompTableCP>
@@ -33,7 +34,7 @@ const CompTable = () =>{
                 </tr>
             </CompTableCP>
             <ButtonWrap>
-            <Link to='/matCheak/'><Button1>실시간매트현황</Button1></Link>
+            <Link to='/matCheak'><Button1>실시간매트현황</Button1></Link>
             </ButtonWrap>
 
         </Wrap>

@@ -17,7 +17,7 @@ const Header = () =>{
             <MenuWrap>
                 <p><Link to="/complist?menuid=compInfo187">대회정보</Link></p>
                 <p><Link to="/complist/1">대회신청</Link></p>
-                <p><Link to="/complist/1">관리자페이지</Link></p>
+                <p><Link to="/managerIndex/">관리자페이지</Link></p>
             </MenuWrap>
         </HeaderWrap>
     )
