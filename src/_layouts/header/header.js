@@ -8,6 +8,7 @@
 import styled from 'styled-components';
 import logo from '../../contents/images/TestLogo.png'
 import { Link } from 'react-router-dom';
+
 const Header = () =>{
     return(
         <HeaderWrap>
@@ -15,12 +16,12 @@ const Header = () =>{
             <Link to="/"><LogoImg></LogoImg></Link>
             </LogoWrap>
             <MenuWrap>
-                <p><Link to="/complist?menuid=compInfo187">대회정보</Link></p>
-                <p><Link to="/complist/1">대회신청</Link></p>
-                <p><Link to="/managerIndex/">관리자페이지</Link></p>
+                <p><Link to="/makeSummary">대회관련</Link></p>
+                <p><Link to="/">대회운영</Link></p>
+                <p><Link to="/">관리자관리</Link></p>
             </MenuWrap>
         </HeaderWrap>
-    )
+    );
 }
 const HeaderWrap = styled.div`
     font-family: 'SejonghospitalBold';
