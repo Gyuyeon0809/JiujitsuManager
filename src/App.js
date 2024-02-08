@@ -3,7 +3,7 @@ import './App.css';
 // import CompInfo from './pages/compInfo';
 // import CompInfoListPage from './pages/compInfoList';
 // import Index from './pages/index';
-// import MatCheakPage from './pages/matCheak';
+import MatCheakPage from './pages/matCheak';
 // import ApplyFormPage from './pages/applyForm';
 // import CompOpenPage from './pages/1_manager/compOpen';
 // import CompPlayerListPage from './pages/1_manager/compPlayerList';
@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<LoginPage/>}></Route>
         {/* <Route path="/complist/*" element={<CompInfoListPage/>}></Route> */}
         {/* <Route path="/compinfo/*" element={<CompInfo/>}></Route> */}
-        {/* <Route path="/matCheak/*" element={<MatCheakPage/>}></Route> */}
+        <Route path="/matCheak/*" element={<MatCheakPage/>}></Route>
         {/* <Route path="/applyComp/*" element={<ApplyFormPage/>}></Route> */}
         {/* <Route path="/managerIndex/compOpenPage*" element={<CompOpenPage/>}></Route> */}
         {/* <Route path="/managerIndex/compPlayerList*" element={<CompPlayerListPage/>}></Route> */}

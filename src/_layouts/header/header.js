@@ -8,19 +8,52 @@
 import styled from 'styled-components';
 import logo from '../../contents/images/TestLogo.png'
 import { Link } from 'react-router-dom';
+import Dropdown from '../dropdownHeader/dropdown';
+import React from 'react';
 
 const Header = () =>{
+    const [dropdownVisibility, setDropdownVisibility] = React.useState(false);
     return(
         <HeaderWrap>
             <LogoWrap>
             <Link to="/"><LogoImg></LogoImg></Link>
             </LogoWrap>
             <MenuWrap>
-                <p><Link to="/makeSummary">대회관련</Link></p>
-                <p><Link to="/">대회운영</Link></p>
-                <p><Link to="/">관리자관리</Link></p>
+                <MenuList>
+                    <li><span onClick={e => setDropdownVisibility(!dropdownVisibility)}>대회관련</span>
+                    <Dropdown visibility={dropdownVisibility}>
+                        <ul>
+				            <li><Link to="#">명단정리</Link></li>
+				            <li><Link to="#">대진정리</Link></li>
+				            <li><Link to="#">매트관리</Link></li>
+                            <SpaceText>0</SpaceText>
+			            </ul>
+                    </Dropdown>
+                    </li>
+                    <li><span onClick={e => setDropdownVisibility(!dropdownVisibility)}>대회운영</span>
+                    <Dropdown visibility={dropdownVisibility}>
+                        <ul>
+				            <li><Link to="#">경기진행</Link></li>
+				            <li><Link to="/matCheak">매트현황</Link></li>
+				            <li><Link to="#">시상진행</Link></li>
+                            <li><Link to="#">팀순위</Link></li>
+			            </ul>
+                    </Dropdown>
+                    </li>
+                    <li><span onClick={e => setDropdownVisibility(!dropdownVisibility)}>관리자관리</span>
+                    <Dropdown visibility={dropdownVisibility}>
+                        <ul>
+				            <li><Link to="#">아이디관리</Link></li>
+				            <li><Link to="#">권한관리</Link></li>
+                            <SpaceText>0</SpaceText>
+                            <SpaceText>0</SpaceText>
+			            </ul>
+                    </Dropdown>
+                    </li>
+                </MenuList>
             </MenuWrap>
         </HeaderWrap>
+
     );
 }
 const HeaderWrap = styled.div`
@@ -29,29 +62,45 @@ const HeaderWrap = styled.div`
     width: 100%;
     height: 100px;
     display: flex;
-    justify-content: flex-start;
     border-bottom: 3px solid black;
+    *{
+        margin: 0;
+        padding: 0;
+    }
 `
 const MenuWrap = styled.div`
-    width: 1000px;
+    width: 1220px;
     height: 100%;
+`
+const MenuList = styled.ul`
+    /* height: 100%; */
+    top:30px;
+    position: relative;
     display: flex;
     justify-content: space-between;
-    justify-items: center;
     text-align: center;
+    margin: 0 auto;
+    list-style: none;
     align-items: center;
-    a{
-        color:black;
-        text-decoration: none;
-    }
-    p{
+    justify-items: center;
+    width: 100%;
+    span{
         cursor: pointer;
-        padding: 8px;
-        &:hover{
-            color: #2F4073;
-        }
     }
-    
+    a{
+        text-decoration: none;
+        color: black;
+        font-size: 0.8em;
+        font-family: 'GmarketSansMedium';
+    }
+    >li{
+        text-align: center;
+        width: 33.33333333333333%; 
+    }
+`
+const SpaceText = styled.li`
+    color: white;
+    opacity: 0;
 `
 const LogoWrap = styled.div`
     width: 700px;
